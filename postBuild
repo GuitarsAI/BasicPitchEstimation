@@ -1,11 +1,20 @@
 # Test installing musescore
-wget https://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.3.2/MuseScore-2.3.2-x86_64.AppImage
-chmod u+x MuseScore*.AppImage
-./MuseScore-2.3.2-x86_64.AppImage --appimage-extract
 
 add-apt-repository ppa:mscore-ubuntu/mscore-stable
 apt-get update
 apt-get install musescore
+
+modprobe fuse
+groupadd fuse
+user="$(whoami)"
+usermod -a -G fuse $user
+
+wget https://ftp.osuosl.org/pub/musescore/releases/MuseScore-2.3.2/MuseScore-2.3.2-x86_64.AppImage
+chmod u+x MuseScore*.AppImage
+./MuseScore-2.3.2-x86_64.AppImage --appimage-extract
+
+
+
 
 jupyter contrib nbextension install --user
 jupyter nbextension enable --py widgetsnbextension
