@@ -1,6 +1,3 @@
-#Test Lilypond
-wget http://lilypond.org/download/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh
-sh lilypond-2.18.2-OS-TYPE.sh
 
 jupyter contrib nbextension install --user
 jupyter nbextension enable --py widgetsnbextension
