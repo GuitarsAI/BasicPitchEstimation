@@ -1,4 +1,6 @@
 # Test installing musescore
+sudo add-apt-repository ppa:mscore-ubuntu/mscore-stable
+sudo apt-get install musescore
 
 modprobe fuse
 groupadd fuse
