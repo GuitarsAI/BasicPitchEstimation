@@ -1,3 +1,7 @@
+#Test Lilypond
+wget http://lilypond.org/download/binaries/linux-64/lilypond-2.18.2-1.linux-64.sh
+sh lilypond-2.18.2-OS-TYPE.sh
+
 # Test installing musescore
 sudo add-apt-repository ppa:mscore-ubuntu/mscore-stable
 sudo apt-get install musescore
